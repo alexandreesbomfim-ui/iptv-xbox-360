@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.10)
+project(XboxIPTVManager C CXX)
+
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR powerpc)
+
+add_executable(default.elf main.cpp)
+
+target_compile_options(default.elf PRIVATE -mno-eabi -mno-sdata -ffunction-sections -fdata-sections)
